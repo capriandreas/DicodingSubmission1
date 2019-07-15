@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Add People</title>
+    <title>Add User</title>
 </head>
 
 <body>
