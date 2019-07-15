@@ -17,12 +17,12 @@ $stmt = sqlsrv_query( $conn, $tsql);
         <th>Name</th> <th>Email</th> <th>Job</th> <th>Date</th>
     </tr>
     <?php  
-    while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {        
+    while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {  
         echo "<tr>";
         echo "<td>".$row['Name']."</td>";
         echo "<td>".$row['Email']."</td>";
         echo "<td>".$row['Job']."</td>";   
-		echo "<td>".$row['CreatedDate']."</td>";   		
+		echo "<td>".date_format($row['CreatedDate'],"d-m-Y")."</td>";   		
     }
     ?>
     </table>
